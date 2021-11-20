@@ -7,8 +7,12 @@ const Todo = new mongoose.Schema({
         required:true,
         trim:true,
         maxlength:50,
-    }
+    },
+
 },{
     timestamps:true
-})
+},
+    {
+        completed:true
+    })
 module.exports = mongoose.model("Todo", Todo);
